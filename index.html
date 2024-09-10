@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NASA Website Clone</title>
+
+  <!-- Description -->
+  <meta name="description" content="Discover the wonders of the universe with our NASA website clone. Get the latest updates on space missions, astronomy news, space exploration, scientific research, and more. Explore interactive content and stay informed about NASA's groundbreaking work in space science.">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="NASA, space, missions, astronomy, science, space exploration, space news, space technology, NASA research, universe, space discoveries, space science, space news updates, NASA events">
+
+
+  <!-- Author -->
+  <meta name="author" content="HaseebUrRehman, CodeWithBismillah">
+
+  <link rel="icon" type="image/x-icon" href="images/nasa-logo2.png">
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- AOS animation CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Main css file -->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <!-- Mobile Responsive css file -->
+  <link rel="stylesheet" type="text/css" href="css/mobile_responsive.css">
+
+  <title>CodeWithBismillah</title>
+
+  <!-- Include Bootstrap CSS and JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <nav style="background-color: black;" class="navbar navbar-expand-lg">
+    <div class="container-fluid py-2">
+      <!-- Mobile Toggle Button -->
+      <button class="text-light navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars text-light"></i>
+      </button>
+
+      <!-- Center Logo for Mobile -->
+      <a class="navbar-brand mx-auto d-lg-none" href="#">
+        <img width="40" src="images/nasa-logo2.png" alt="Logo">
+      </a>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+        <!-- Left: Explore Dropdown and Search Bar -->
+        <div class="d-flex flex-column flex-lg-row align-items-center mb-2 mb-lg-0">
+          <!-- Explore Dropdown -->
+          <div class="nav-item dropdown me-3">
+            <a class="nav-link rounded-0 btn-dark text-light border border-light dropdown-toggle" href="#" id="navbarExploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Explore
+            </a>
+            <ul style="background-color: black;" class="rounded-0 mt-3 dropdown-menu dropdown-menu-dark" aria-labelledby="navbarExploreDropdown">
+              <li><a class="dropdown-item my-2 text-light" href="#">Home</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Missions</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Human in Space</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">The Solar System</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">The Universe</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Science</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Aeronautics</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Technology</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Learning Resources</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">About NASA</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Español</a></li>
+            </ul>
+          </div>
+
+          <!-- Search Bar -->
+          <form class="d-flex">
+            <input class="form-control me-2 bg-dark text-light rounded-0 border border-secondary" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+
+        <!-- Center Logo for Larger Screens -->
+        <a class="navbar-brand d-none d-lg-block position-absolute start-50 translate-middle-x" href="#">
+          <img width="60" src="images/nasa-logo2.png" alt="Logo">
+        </a>
+
+        <!-- Right: Dropdown Menus and NASA+ Button -->
+        <ul class="navbar-nav d-flex align-items-center mb-2 mb-lg-0">
+          <!-- News & Events Dropdown -->
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link text-light border-0 dropdown-toggle fw-bold fs-5" href="#" id="navbarNewsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              News & Events
+            </a>
+            <ul style="background-color: black;" class="rounded-0 mt-3 dropdown-menu dropdown-menu-dark" aria-labelledby="navbarNewsDropdown">
+              <li><a class="dropdown-item my-2 text-light fs-5 fw-bold mb-4" href="#">News & Events <i class="fa fa-arrow-right btn-sm btn-danger rounded-circle text-light ms-3"></i></a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">All NASA News</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Video Series on NASA+</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Podcasts</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Blogs</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Newsletters</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Social Media</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Media Resources</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Events</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Upcoming Launches & Landings</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Virtual Guest Program</a></li>
+            </ul>
+          </li>
+
+          <!-- Multimedia Dropdown -->
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link text-light border-0 dropdown-toggle fw-bold fs-5" href="#" id="navbarMultimediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Multimedia
+            </a>
+            <ul style="background-color: black;" class="rounded-0 mt-3 dropdown-menu dropdown-menu-dark" aria-labelledby="navbarMultimediaDropdown">
+              <li><a class="dropdown-item my-2 text-light fs-5 fw-bold mb-4" href="#">Multimedia <i class="fa fa-arrow-right btn-sm btn-danger rounded-circle text-light ms-3"></i></a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">NASA+</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">NASA Images</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">NASA Live</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">NASA Apps</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Podcasts</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Image Of The Day</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">e-Books</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Sounds and Ringtones</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">Interactives</a></li>
+              <li><a class="dropdown-item my-2 text-light" href="#">STEM Multimedia</a></li>
+            </ul>
+          </li>
+
+          <!-- NASA+ Button -->
+          <li class="nav-item">
+            <a href="#!" id="btnNasaLive" class="text-light text-decoration-none">NASA+ 
+              <small><span id="Live">LIVE</span></small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+</head>
+<body>
+
+  <section id="hero" class="text-light container-fluid">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="video-block">
+      <source src="images/hero-bg-video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="HeroContent row position-relative">
+        <div class="col-lg-8 col-md-4 col-sm-4">
+          <div class="Heading">
+            <h1>NASA Sets Coverage for Starliner Returns</h1>
+            <p>NASA and Boeing are targeting approximately 12:03 a.m. EDT (0403 UTC), Saturday, Sept. 7, for the landing. NASA will host a pre-departure news conference at 12 p.m., Wednesday, Sept. 4</p>
+            <button class="btn btn-danger">Read the Starliner media advisory</button>
+
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="800" class="row mt-lg-3 mt-sm-1 mt-md-1">
+        <div class="col-lg-10 col-md-4 col-sm-4">
+          <div id="mission" class="mt-lg-5 mt-md-1 mt-sm-1 d-flex p-lg-4 p-md-2 p-sm-2">
+
+            <div class="MissionBlock w-50 mt-lg-2 mt-md-3 mt-sm-3 pt-lg-2 pt-md-2 pt-sm-2 border-top border-light border-1">
+              <p class="text-light">UP COMMING MISSION</p>
+              <h5 class="fw-lg-bold">Crew-9 Crew Update<a><i class="fa fa-arrow-right btn-sm btn-danger ms-3 rounded-circle"></i></a></h5>
+            </div>
+
+            <div class="MissionBlock w-50 mt-lg-2 mt-md-3 mt-sm-3 pt-lg-2 pt-md-2 pt-sm-2 ms-3 border-top border-light border-1">
+              <p class="text-light">EXPERIENCE THE LAUNCH</p>
+              <h5 class="fw-lg-bold">NASA Social Application<a><i class="fa fa-arrow-right btn-sm btn-danger ms-3 rounded-circle"></i></a></h5>
+            </div>
+
+            <div class="MissionBlock w-50 mt-lg-2 mt-md-3 mt-sm-3 pt-lg-2 pt-md-2 pt-sm-2 ms-3 border-top border-light border-1">
+              <p class="text-light">EXPLORING THROUGH ART</p>
+              <h5 class="fw-lg-bold">Kids Art Challenge<a><i class="fa fa-arrow-right btn-sm btn-danger ms-3 rounded-circle"></i></a></h5>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" id="FeaturedNews" class="mb-lg-5 mb-md-2 mb-sm-2 mx-lg-5 mx-md-2 mx-sm-2">
+      <div class="row mx-auto justify-content-center">
+        <!-- Header -->
+        <div class="col-12 d-flex align-items-center justify-content-between mb-4">
+          <h1 class="Heading fw-bold my-lg-5 my-md-3 my-sm-2">Featured News</h1>
+          <h5 class="fw-bold fs-lg-3 fs-md-5 fs-sm-6 text-end my-lg-5 my-md-3 my-sm-2">
+            More NASA News
+            <a href="#">
+              <i class="fa fa-arrow-right btn-sm btn-danger ms-lg-3 ms-md-1 ms-sm-1 rounded-circle"></i>
+            </a>
+          </h5>
+        </div>
+
+        <!-- Cards Row 1 -->
+        <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
+          <a data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1050" href="https://www.nasa.gov/" class="d-block">
+            <div id="Card1" class="card rounded-0 bg-dark text-white">
+              <img src="images/Card1-img.jpg" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <div class="upper-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>News Release</p>
+                </div>
+                <div class="lower-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>4 min read</p>
+                  <h4 class="fw-bold lh-1">NASA Sets Coverage for Starliner News Conference, Return to Earth</h4>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Cards Row 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <a data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1100" href="https://www.nasa.gov/" class="d-block">
+            <div id="Card2" class="rounded-0 card bg-dark text-white">
+              <img src="images/Card2-img.jpg" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <div class="upper-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>Article</p>
+                </div>
+                <div class="lower-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>2 min read</p>
+                  <h4 class="fw-bold lh-1">NASA to Support DARPA Robotic Satellite Servicing Program</h4>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <a data-aos="fade-left" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1150" href="https://www.nasa.gov/" class="d-block">
+            <div id="Card3" class="rounded-0 card bg-dark text-white">
+              <img src="images/Card3-img.jpg" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <div class="upper-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>Article</p>
+                </div>
+                <div class="lower-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>6 min read</p>
+                  <h4 class="fw-bold lh-1">NASA’s Hubble, MAVEN Help Solve the Mystery of Mars’ Escaping Water</h4>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a data-aos="fade-left" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1150" href="https://www.nasa.gov/" class="d-block mt-4">
+            <div id="Card3" class="rounded-0 card bg-dark text-white">
+              <img src="images/Card3-img.jpg" class="card-img" alt="...">
+              <div class="card-img-overlay">
+                <div class="upper-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>Article</p>
+                </div>
+                <div class="lower-content">
+                  <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>6 min read</p>
+                  <h4 class="fw-bold lh-1">NASA’s Hubble, MAVEN Help Solve the Mystery of Mars’ Escaping Water</h4>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- News Releases -->
+        <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1250" id="NewsRelease" class="row mx-auto justify-content-center mt-4">
+          <!-- Loop through NewsReleaseBlocks -->
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-4 NewsReleaseBlock">
+            <div class="d-flex align-items-center">
+              <img class="rounded-circle me-3" src="images/NewsRelease-img1.jpg" alt="News Image">
+              <div class="d-block TextContent">
+                <p class="Time mb-1">2 MIN READ</p>
+                <p class="Title mb-1">Artemis IV: Gateway Gadget Fuels Deep Space Dining</p>
+                <a href="#" class="text-uppercase text-decoration-none text-secondary">
+                  <i class="fa fa-arrow-right border border-secondary rounded-circle me-2 p-1"></i>Article
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-4 NewsReleaseBlock">
+            <div class="d-flex align-items-center">
+              <img class="rounded-circle me-3" src="images/NewsRelease-img2.jpg" alt="News Image">
+              <div class="d-block TextContent">
+                <p class="Time mb-1">5 MIN READ</p>
+                <p class="Title mb-1">NASA Earth Scientists Take Flight, Set Sail to Verify PACE Satellite Data</p>
+                <a href="#" class="text-uppercase text-decoration-none text-secondary">
+                  <i class="fa fa-arrow-right border border-secondary rounded-circle me-2 p-1"></i>Article
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-4 NewsReleaseBlock">
+            <div class="d-flex align-items-center">
+              <img class="rounded-circle me-3" src="images/NewsRelease-img3.jpg" alt="News Image">
+              <div class="d-block TextContent">
+                <p class="Time mb-1">5 MIN READ</p>
+                <p class="Title mb-1">NASA’s Webb Reveals Distorted Galaxy Forming Cosmic Question Mark</p>
+                <a href="#" class="text-uppercase text-decoration-none text-secondary">
+                  <i class="fa fa-arrow-right border border-secondary rounded-circle me-2 p-1"></i>Article
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-4 NewsReleaseBlock">
+            <div class="d-flex align-items-center">
+              <img class="rounded-circle me-3" src="images/NewsRelease-img4.jpg" alt="News Image">
+              <div class="d-block TextContent">
+                <p class="Time mb-1">6 MIN READ</p>
+                <p class="Title mb-1">What’s Up: September 2024 Skywatching Tips from NASA</p>
+                <a href="#" class="text-uppercase text-decoration-none text-secondary">
+                  <i class="fa fa-arrow-right border border-secondary rounded-circle me-2 p-1"></i>Article
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Continue with remaining news releases -->
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1300" id="FloatingFleet" class="mt-3 mb-5">
+      <div class="card align-items-center rounded-0 bg-dark text-white">
+        <img src="images/FloatingFeet-bg-img.jpg" class="card-img" alt="Floating Fleet Image">
+        <div class="card-img-overlay p-lg-5 p-md-4 p-sm-3 w-lg-50 w-md-75 w-100">
+          <div class="row">
+            <div class="col-lg-7">
+              <h1 data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1350" class="card-title fw-bold mt-5 lh-1">Floating Fleet</h1>
+              <p data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1370" class="card-text mt-4 fs-lg-5 fs-md-6 fs-sm-6">
+                NASA engineers are developing a fleet of autonomous robots that would venture beneath Antarctic ice shelves to help scientists calculate how rapidly the frozen continent is losing ice—and how fast that melting could cause global sea levels to rise.
+              </p>
+              <h4 data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1370" class="card-text fw-bold mt-4">
+                The IceNode Project
+                <i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i>
+              </h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1400" id="VideoPodcasts" class="container-fluid my-5">
+      <div class="row">
+        <div class="col-12 d-flex flex-column flex-md-row align-items-center justify-content-between mb-4">
+          <h1 data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1450" class="Heading fw-bold my-3 my-md-0">Some of NASA's Videos</h1>
+          <h5 data-aos="fade-left" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1450" class="fw-bold text-end my-3 my-md-0">
+            More NASA Videos
+            <a><i class="fa fa-arrow-right btn-sm btn-danger ms-3 rounded-circle"></i></a>
+          </h5>
+        </div>
+
+        <div class="col-lg-8 col-md-12 mb-4 mb-lg-0">
+          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/LinWJsangs4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="col-lg-4 col-md-12 SideVideoBlock">
+          <p class="text-dark p-3 rounded">Scroll down here...</p>
+          <div class="SideVideo mb-4">
+            <iframe width="100%" src="https://www.youtube.com/embed/pSHVbLPWA28" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="SideVideo mb-4">
+            <iframe width="100%" src="https://www.youtube.com/embed/60h6lpnSgck" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="SideVideo mb-4">
+            <iframe width="100%" src="https://www.youtube.com/embed/Lsim6FYtXSw" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="SideVideo mb-4">
+            <iframe width="100%" src="https://www.youtube.com/embed/tijyybrmfsM" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="SideVideo">
+            <iframe width="100%" src="https://www.youtube.com/embed/KKkUvGH5ANQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1500" id="NewsTabs" class="container-fluid my-5 text-center">
+      <div class="justify-content-center mx-auto">
+        <div class="row">
+          <div class="col-12 d-flex flex-column flex-md-row align-items-center justify-content-between mb-4">
+            <h1 data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1550" class="Heading fw-bold my-3 my-md-0">NASA's News, Missions & Podcasts</h1>
+            <h5 data-aos="fade-left" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1550" class="fw-bold text-end my-3 my-md-0">
+              More Details
+              <a><i class="fa fa-arrow-right btn-sm btn-danger ms-3 rounded-circle"></i></a>
+            </h5>
+          </div>
+        </div>
+        <div class="d-block align-items-center justify-content-center mx-auto">
+          <div class="nav flex-row justify-content-center nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link rounded-0 active mx-2" id="v-pills-News-tab" data-bs-toggle="pill" data-bs-target="#v-pills-News" type="button" role="tab" aria-controls="v-pills-News" aria-selected="true">News</button>
+            <button class="nav-link rounded-0 mx-2" id="v-pills-Missions-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Missions" type="button" role="tab" aria-controls="v-pills-Missions" aria-selected="false">Missions</button>
+            <button class="nav-link rounded-0 mx-2" id="v-pills-Podcasts-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Podcasts" type="button" role="tab" aria-controls="v-pills-Podcasts" aria-selected="false">Podcasts</button>
+          </div>
+          <div class="tab-content container mt-4" id="v-pills-tabContent">
+
+            <div class="tab-pane fade show active" id="v-pills-News" role="tabpanel" aria-labelledby="v-pills-News-tab">
+
+              <div class="row justify-content-center">
+                <div class="col-lg-6">
+                  <div class="card mb-3 mx-auto">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="images/Card1-img.jpg" class="h-100 img-fluid rounded-0" alt="...">
+                        <div class="card-img-overlay text-start text-light">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>News Release</p>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body text-start">
+                          <h5 class="card-title fw-bold">NASA Sets Coverage for Starliner</h5>
+                          <p class="card-text lh-sm fs-6">NASA and Boeing are targeting approximately 12:03 a.m. EDT (0403 UTC), Saturday, Sept. 7...</p>
+                          <div class="d-block card-footer">
+                            <p class=" my-1 text-uppercase fs-6 text-start text-dark fs-6"><i class="fa fa-user-circle-o me-2"></i>Dr. Willian Jhon</p>
+                            <p class="my-1 text-lowercase text-start text-muted fs-6">More NASA News<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-flex">
+                  <div class="card mb-3 mx-auto">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="images/Card1-img.jpg" class="h-100 img-fluid rounded-0" alt="...">
+                        <div class="card-img-overlay text-start text-light">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>News Release</p>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body text-start">
+                          <h5 class="card-title fw-bold">NASA Sets Coverage for Starliner</h5>
+                          <p class="card-text lh-sm fs-6">NASA and Boeing are targeting approximately 12:03 a.m. EDT (0403 UTC), Saturday, Sept. 7...</p>
+                          <div class="d-block card-footer">
+                            <p class=" my-1 text-uppercase fs-6 text-start text-dark fs-6"><i class="fa fa-user-circle-o me-2"></i>Dr. Willian Jhon</p>
+                            <p class="my-1 text-lowercase text-start text-muted fs-6">More NASA News<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-none d-lg-flex row justify-content-center mt-2">
+                <div class="col-lg-6 d-none d-lg-block">
+                  <div class="card mb-3 mx-auto">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="images/Card1-img.jpg" class="h-100 img-fluid rounded-0" alt="...">
+                        <div class="card-img-overlay text-start text-light">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>News Release</p>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body text-start">
+                          <h5 class="card-title fw-bold">NASA Sets Coverage for Starliner</h5>
+                          <p class="card-text lh-sm fs-6">NASA and Boeing are targeting approximately 12:03 a.m. EDT (0403 UTC), Saturday, Sept. 7...</p>
+                          <div class="d-block card-footer">
+                            <p class=" my-1 text-uppercase fs-6 text-start text-dark fs-6"><i class="fa fa-user-circle-o me-2"></i>Dr. Willian Jhon</p>
+                            <p class="my-1 text-lowercase text-start text-muted fs-6">More NASA News<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                  <div class="card mb-3 mx-auto">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="images/Card1-img.jpg" class="h-100 img-fluid rounded-0" alt="...">
+                        <div class="card-img-overlay text-start text-light">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>News Release</p>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body text-start">
+                          <h5 class="card-title fw-bold">NASA Sets Coverage for Starliner</h5>
+                          <p class="card-text lh-sm fs-6">NASA and Boeing are targeting approximately 12:03 a.m. EDT (0403 UTC), Saturday, Sept. 7...</p>
+                          <div class="d-block card-footer">
+                            <p class=" my-1 text-uppercase fs-6 text-start text-dark fs-6"><i class="fa fa-user-circle-o me-2"></i>Dr. Willian Jhon</p>
+                            <p class="my-1 text-lowercase text-start text-muted fs-6">More NASA News<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-Missions" role="tabpanel" aria-labelledby="v-pills-Missions-tab">
+              <div class="row justify-content-center">
+                <div class="col-lg-6 MissionCardBox">
+                  <a class="text-decoration-none" href="https://www.nasa.gov/">
+                    <div class="MissionCard card bg-dark text-white">
+                      <img src="images/Card1-img.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay text-start">
+                        <h1 class="text-light card-title fw-bold fs-2 border border-light rounded-0 p-2">NASA Sets Coverage For Starliner</h1>
+                        <p class="card-text mx-2 p-2 rounded-2 text-light">This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="my-1 ms-2 text-lowercase text-start text-primary fs-6">Mission Details<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 MissionCardBox d-none d-lg-block">
+                  <a class="text-decoration-none" href="https://www.nasa.gov/">
+                    <div class="MissionCard card bg-dark text-white">
+                      <img src="images/Card1-img.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay text-start">
+                        <h1 class="text-light card-title fw-bold fs-2 border border-light rounded-0 p-2">NASA Sets Coverage For Starliner</h1>
+                        <p class="card-text mx-2 p-2 rounded-2 text-light">This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="my-1 ms-2 text-lowercase text-start text-primary fs-6">Mission Details<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="row justify-content-center mt-3 d-none d-lg-flex">
+                <div class="col-lg-6 MissionCardBox">
+                  <a class="text-decoration-none" href="https://www.nasa.gov/">
+                    <div class="MissionCard card bg-dark text-white">
+                      <img src="images/Card1-img.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay text-start">
+                        <h1 class="text-light card-title fw-bold fs-2 border border-light rounded-0 p-2">NASA Sets Coverage For Starliner</h1>
+                        <p class="card-text mx-2 p-2 rounded-2 text-light">This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="my-1 ms-2 text-lowercase text-start text-primary fs-6">Mission Details<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-6 MissionCardBox">
+                  <a class="text-decoration-none" href="https://www.nasa.gov/">
+                    <div class="MissionCard card bg-dark text-white">
+                      <img src="images/Card1-img.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay text-start">
+                        <h1 class="text-light card-title fw-bold fs-2 border border-light rounded-0 p-2">NASA Sets Coverage For Starliner</h1>
+                        <p class="card-text mx-2 p-2 rounded-2 text-light">This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="my-1 ms-2 text-lowercase text-start text-primary fs-6">Mission Details<a><i class="fa fa-arrow-right text-danger ms-3 rounded-circle"></i></a></p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-Podcasts" role="tabpanel" aria-labelledby="v-pills-Podcasts-tab">
+              <div class="row mx-auto justify-content-center">
+                <div class="col-lg-6 text-start d-none d-lg-block">
+                  <a href="https://www.nasa.gov/">
+                    <div id="Card1" class="card rounded-0 bg-dark text-white">
+                      <img src="images/Card1-img.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+
+                        <div class="upper-content">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>News Release</p>
+                        </div>
+
+                        <div class="lower-content">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>4 min read</p>
+                          <h4 class="fw-bold lh-1">NASA Sets Coverage for Starliner News Conference, Return to Earth</h4>
+                        </div>
+
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-3 text-start d-none d-lg-block">
+                  <a href="https://www.nasa.gov/">
+                    <div id="Card2" class="rounded-0 card bg-dark text-white">
+                      <img src="images/Card2-img.jpg" class="card-img" alt="...">
+                      <div class="card-img-overlay">
+
+                        <div class="upper-content">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>Article</p>
+                        </div>
+
+                        <div class="lower-content">
+                          <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>2 min read</p>
+                          <h4 class="fw-bold lh-1">NASA to Support DARPA Robotic Satellite Servicing Program</h4>
+                        </div>
+
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-3 text-start">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <a href="https://www.nasa.gov/">
+                        <div id="Card3" class="rounded-0 card bg-dark text-white">
+                          <img src="images/Card3-img.jpg" class="card-img" alt="...">
+                          <div class="card-img-overlay">
+
+                            <div class="upper-content">
+                              <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>Article</p>
+                            </div>
+
+                            <div class="lower-content">
+                              <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>6 min read</p>
+                              <h4 class="fw-bold lh-1">NASA’s Hubble, MAVEN Help Solve the Mystery of Mars’ Escaping Water</h4>
+                            </div>
+
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-lg-12">
+                      <a href="https://www.nasa.gov/">
+                        <div id="Card4" class="rounded-0 card bg-dark text-white">
+                          <img src="images/Card4-img.jpg" class="card-img" alt="...">
+                          <div class="card-img-overlay">
+
+                            <div class="upper-content">
+                              <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>Article</p>
+                            </div>
+
+                            <div class="lower-content">
+                              <p class="card-title text-uppercase fs-6"><i class="me-2 fa fa-wpexplorer"></i>4 min read</p>
+                              <h4 class="fw-bold lh-1">Eclipses Create Atmospheric Gravity Waves, NASA Student Teams Confirm</h4>
+                            </div>
+
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1600" id="DayImage" class="mb-5 container-fluid">
+      <div class="row">
+        <div class="col-lg-4">
+          <p data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1650" class="PreHeading">TODAY</p>
+          <h1 data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1670" class="fw-bold mb-5">Image Of The Day</h1>
+          <h4 data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1670" >T-38 Flyover of Artemis I on Launch Pad</h4>
+          <p data-aos="fade-right" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1700" class="card-text">Construction of the world’s largest wind tunnel and its original 40- by 80-foot test section. A later expansion created an additional 80- by 120-foot test section. A Navy blimp, which would have been based at Hangars 2 and 3 at Moffett Field, patrols in the background.<a><i class="fa fa-arrow-right btn-sm btn-danger ms-3 rounded-circle"></i></a></p>
+        </div>
+        <div data-aos="fade-left" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1650" class="col-lg-8">
+          <img style="height: 500px;" src="images/ImageOfDay-img.jpg" class="w-100"> 
+        </div>
+      </div>
+    </section>
+
+
+    <section data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1800" id="FloatingFleet" class="mt-3 mb-5">
+      <div class="card align-items-center rounded-0 bg-dark text-white">
+        <img src="images/FloatingFeet-bg-img.jpg" class="card-img" alt="Floating Fleet Image">
+        <div class="card-img-overlay p-lg-5 p-md-4 p-sm-3 w-lg-50 w-md-75 w-100">
+          <div class="row">
+            <div class="col-lg-7">
+              <h1 class="card-title fw-bold mt-5 lh-1">Earth Information</h1>
+              <p class="card-text mt-4 fs-lg-5 fs-md-6 fs-sm-6">
+                For more than 50 years, NASA satellites have provided data on Earth's land, water, air, temperature, and climate. NASA's Earth Information Center allows visitors to see how our planet is changing in six key areas: sea level rise and coastal impacts.
+              </p>
+              <h4 class="card-text fw-bold mt-4">
+                The IceNode Project
+                <i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section data-aos="fade-up" data-aos-offset="100" data-aos-delay="0" data-aos-duration="1900" id="NasaTopics" class="mt-3 mb-5 container-fluid">
+      <div>
+        <h1 class="fw-bold fs-1 my-5 text-center">More Topics from NASA</h1>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card2-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">The IceNode Project<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card1-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">Missions<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card3-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">Humans In Space<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card4-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">Climate Change<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card2-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">Our Solar System<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card1-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">Universe<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card3-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">Science News<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card bg-dark text-white">
+            <img src="images/Card4-img.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h5 class="card-text fw-bold">Aeronautics<i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="FloatingFleet" class="mt-3">
+      <div class="card align-items-center rounded-0 bg-dark text-white">
+        <img src="images/FloatingFeet-bg-img.jpg" class="card-img" alt="Floating Fleet Image">
+        <div class="card-img-overlay p-lg-5 p-md-4 p-sm-3 w-lg-50 w-md-75 w-100">
+          <div class="row">
+            <div class="col-lg-7">
+              <h1 class="card-title fw-bold mt-5 lh-1">Earth Information</h1>
+              <p class="card-text mt-4 fs-lg-5 fs-md-6 fs-sm-6">
+                For more than 50 years, NASA satellites have provided data on Earth's land, water, air, temperature, and climate. NASA's Earth Information Center allows visitors to see how our planet is changing in six key areas: sea level rise and coastal impacts.
+              </p>
+              <h4 class="card-text fw-bold mt-4">
+                The IceNode Project
+                <i class="fa fa-arrow-right btn btn-danger ms-3 rounded-circle"></i>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer style="background-color: black;" class="text-light text-center text-lg-start">
+      <!-- Section: Social media -->
+      <section class="row d-flex p-4 justify-content-center mx-auto border-bottom">
+        <div class="col-lg-5 d-flex flex-column align-items-center text-center">
+          <img src="images/nasa-logo2.png" width="150" height="140" alt="NASA Logo">
+          <h6 class="fw-bold mt-3">Follow NASA</h6>
+          <div class="d-flex justify-content-center mt-3">
+            <a href="" class="me-2 text-light">
+              <i class="fa fa-facebook-f btn btn-outline-secondary rounded-circle"></i>
+            </a>
+            <a href="" class="me-2 text-light">
+              <i class="fa fa-twitter btn btn-outline-secondary rounded-circle"></i>
+            </a>
+            <a href="" class="me-2 text-light">
+              <i class="fa fa-google btn btn-outline-secondary rounded-circle"></i>
+            </a>
+            <a href="" class="me-2 text-light">
+              <i class="fa fa-instagram btn btn-outline-secondary rounded-circle"></i>
+            </a>
+          </div>
+          <p class="mt-3">
+            <a href="#!" class="text-reset">More NASA Social Accounts</a>
+          </p>
+          <p class="mt-2">
+            <a href="#!" class="text-reset">NASA Newsletters</a>
+          </p>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="my-3 fs-4 text-danger p-2 border border-danger" id="Errors"></div>
+          <div class="my-3 fs-4 text-success p-2 border border-success" id="Success"></div>
+          <form class="w-100 mx-auto" id="MyForm">
+            <div class="mb-3">
+              <label for="FullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control rounded-0 bg-dark border border-light py-2 text-light" id="FullName">
+            </div>
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email address</label>
+              <input type="email" class="form-control rounded-0 bg-dark border border-light py-2 text-light" id="Email">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="Subject" class="form-label">Subject</label>
+              <input type="text" class="form-control rounded-0 bg-dark border border-light py-2 text-light" id="Subject">
+            </div>
+            <div class="mb-3">
+              <label for="Message" class="form-label">Message</label>
+              <textarea rows="4" class="form-control rounded-0 bg-dark border border-light py-2 text-light" id="Message"></textarea>
+            </div>
+            <button id="SubmitBtn" type="submit" class="btn btn-primary rounded-0 px-5">Submit</button>
+          </form>
+        </div>
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="container-fluid text-center text-md-start mt-5">
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h5 class="fw-bold mb-4">National Aeronautics and Space Administration</h5>
+            <p class="text-secondary">
+              NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.
+            </p>
+            <a href="" class="text-light">About NASA's Mission</a><br>
+            <a href="" class="text-light fw-bold fs-6">Join Us<i class="fa fa-arrow-right btn btn-danger rounded-circle ms-3 fs-6"></i></a>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <p><a href="#!" class="text-reset">Home</a></p>
+            <p><a href="#!" class="text-reset">News & Events</a></p>
+            <p><a href="#!" class="text-reset">Multimedia</a></p>
+            <p><a href="#!" class="text-reset">NASA+ <small><span id="Live">LIVE</span></small></a></p>
+            <p><a href="#!" class="text-reset">Missions</a></p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h6 class="fw-bold mb-3">Explore</h6>
+            <p><a href="#!" class="text-reset">Humans in Space</a></p>
+            <p><a href="#!" class="text-reset">Earth & Climate</a></p>
+            <p><a href="#!" class="text-reset">The Solar System</a></p>
+            <p><a href="#!" class="text-reset">The Universe</a></p>
+            <p><a href="#!" class="text-reset">Science</a></p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h6 class="fw-bold mb-3">Resources</h6>
+            <p><a href="#!" class="text-reset">Aeronautics</a></p>
+            <p><a href="#!" class="text-reset">Technology</a></p>
+            <p><a href="#!" class="text-reset">Learning Resources</a></p>
+            <p><a href="#!" class="text-reset">About NASA</a></p>
+            <p><a href="#!" class="text-reset">NASA en Español</a></p>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        <p class="mb-0">
+          <a href="#!" class="text-reset">Sitemap</a> |
+          <a href="#!" class="text-reset">For Media</a> |
+          <a href="#!" class="text-reset">Privacy Policy</a> |
+          <a href="#!" class="text-reset">FOIA</a> |
+          <a href="#!" class="text-reset">No FEAR Act</a> |
+          <a href="#!" class="text-reset">Office of the IG</a> |
+          <a href="#!" class="text-reset">Budget & Annual Reports</a> |
+          <a href="#!" class="text-reset">Agency Financial Reports</a> |
+          <a href="#!" class="text-reset">Contact NASA</a> |
+          <a href="#!" class="text-reset">Accessibility</a>
+        </p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- AOS animation js file -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Main js file -->
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </body>
+  </html>

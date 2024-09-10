@@ -1,0 +1,281 @@
+nav #btnExplore, nav #btnNews, nav #btnMultimedia, nav #btnNasaLive{
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+#Live{
+	padding-top: 0px;
+	padding-bottom: -5px;
+	background-color: black;
+	border: 1px solid red;
+	border-radius: 3px;
+	color: white;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-size: 12px;
+
+}
+
+.video-block {
+	position: absolute; /* Position relative to the nearest positioned ancestor */
+	top: 0; /* Start from the top */
+	left: 50%; /* Center horizontally */
+	width: 100%; /* Cover the entire width */
+	height: 100vh; /* Set the height to 75% of the viewport height */
+	transform: translateX(-50%); /* Center the video horizontally */
+	z-index: -1; /* Place it behind other content */
+	object-fit: cover; /* Cover the width while maintaining aspect ratio */
+	pointer-events: none; /* Ignore mouse events */
+}
+
+
+#hero .HeroContent .Heading{
+	margin-top: 50px;
+	padding: 30px;
+}
+#hero h1{
+	font-size: 4.5rem;
+	font-weight: 700;
+	line-height: 1.05em;
+}
+#hero button{
+	font-size: 1.38rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.MissionBlock p{
+	font-size: 0.7rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 3.5px;
+	font-style: normal;
+}
+.MissionBlock h5{
+	font-size: 1rem;
+	font-weight: 600;
+	font-style: normal;
+}
+#NewsRelease .TextContent .Time{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 0.7rem;
+	line-height: 1em;
+	letter-spacing: 3.5px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+#NewsRelease .TextContent .Title{
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.25;
+}
+#NewsRelease .TextContent{
+	padding-left: 1.5rem;
+}
+#NewsRelease .NewsReleaseBlock div img{
+	width: 80px;
+	height: 80px;
+}
+#FeaturedNews{
+	margin-top: 100px;
+}
+#FeaturedNews .Heading{
+	font-size: 3rem;
+}
+#FeaturedNews .card-img-overlay{
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(40, 40, 40, 0.9));
+}
+#FeaturedNews #Card1, #FeaturedNews #Card1 img{
+	max-height: 450px;
+	min-height: 450px;
+}
+#FeaturedNews #Card1 .upper-content{
+	margin-bottom: 290px;
+}
+#FeaturedNews #Card1 .upper-content p, #FeaturedNews #Card1 .lower-content p{
+	letter-spacing: 5px;
+}
+#FeaturedNews #Card2 .upper-content p, #FeaturedNews #Card2 .lower-content p{
+	letter-spacing: 5px;
+}
+#FeaturedNews #Card3 .upper-content p, #FeaturedNews #Card3 .lower-content p{
+	letter-spacing: 5px;
+}
+#FeaturedNews #Card4 .upper-content p, #FeaturedNews #Card4 .lower-content p{
+	letter-spacing: 5px;
+}
+#FeaturedNews #Card2, #FeaturedNews #Card2 img{
+	max-height: 450px;
+	min-height: 450px;
+}
+#FeaturedNews #Card2 .upper-content{
+	margin-bottom: 250px;
+}
+#FeaturedNews #Card3, #FeaturedNews #Card3 img{
+	max-height: 213px;
+	min-height: 213px;
+}
+#FeaturedNews #Card4, #FeaturedNews #Card4 img{
+	max-height: 213px;
+	min-height: 213px;
+}
+#FeaturedNews #Card3 .upper-content, #FeaturedNews #Card4 .upper-content{
+	margin-bottom: 30px;
+}
+#FloatingFleet .card-title{
+	font-weight: 800px;
+	font-size: 5rem;
+	line-height: 1;
+}
+#FloatingFleet .card-text{
+	line-height: 1.65em;
+	font-size: 1.1rem;
+
+}
+#FloatingFleet .card, #FloatingFleet .card img{
+	max-height: 800px;
+	min-height: 800px;
+}
+#FloatingFleet .card-img-overlay h1{
+	padding-top: 150px;
+	font-size: 100px;
+}
+#VideoPodcasts .SideVideoBlock{
+	max-height: 500px;
+	overflow: auto;
+}
+#VideoPodcasts .SideVideoBlock p{
+	background-color:  #e5e7e9 ;
+}
+#VideoPodcasts .SideVideo iframe{
+	max-height: 230px;
+	min-height: 230px;
+}
+#VideoPodcasts .Heading{
+	font-size: 3rem;
+}
+#DayImage{
+	margin-top: 150px;
+}
+#DayImage div div .PreHeading{
+	font-style: normal;
+	font-weight: 500;
+	font-size: .7rem;
+	line-height: 1em;
+	letter-spacing: 3.5px;
+	text-transform: uppercase;
+}
+#DayImage div div h4{
+	font-size: 1.375rem;
+	font-weight: 700;
+	line-height: 1.05em;
+}
+#DayImage div div .card-text{
+	line-height: 1.65em;
+	font-size: 1rem;
+
+}
+#DayImage .card, #DayImage .card img{
+	max-height: 800px;
+	min-height: 800px;
+}
+/*#NewsTabs .nav-link.active{
+	background: red;
+}*/
+.nav-pills .nav-link.active {
+	background-color: #f64137; /* Change to your desired background color */
+	color: #ffffff; /* Change to your desired text color */
+	border: 1px solid #f64137; /* Optional: Adds border to inactive buttons */
+}
+
+.nav-pills .nav-link {
+	background-color: transparent; /* Default background color for inactive buttons */
+	color: black; /* Default text color for inactive buttons */
+	border: 1px solid #f64137; /* Optional: Adds border to inactive buttons */
+	width: 300px;
+}
+
+.nav-pills .nav-link:hover {
+	background-color: #f1f1f1; /* Change to your desired hover background color */
+	color: #000000; /* Change to your desired hover text color */
+}
+.MissionCard{
+	width: 100%;
+	max-height: 280px;
+	min-height: 280px;
+}
+.MissionCard img, .MissionCard .card-img-overlay{
+	width: 100%;
+	max-height: 280px;
+	min-height: 280px;
+}
+.MissionCard .card-img-overlay .card-text{
+	background-color: rgba(66, 73, 73, 0.5);
+}
+/* Default styles for card-title */
+#v-pills-Missions .MissionCardBox .card-title {
+	background-color: transparent; /* Default background color */
+	transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover effect on the entire MissionCardBox to change the card-title background color */
+#v-pills-Missions .MissionCardBox:hover .card-title {
+	background-color: black; /* Change background color on hover */
+}
+
+#v-pills-Podcasts .card-img-overlay{
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(40, 40, 40, 0.9));
+}
+#v-pills-Podcasts #Card1, #v-pills-Podcasts #Card1 img{
+	max-height: 450px;
+	min-height: 450px;
+}
+#v-pills-Podcasts #Card1 .upper-content{
+	margin-bottom: 290px;
+}
+#v-pills-Podcasts #Card1 .upper-content p, #v-pills-Podcasts #Card1 .lower-content p{
+	letter-spacing: 5px;
+}
+#v-pills-Podcasts #Card2 .upper-content p, #v-pills-Podcasts #Card2 .lower-content p{
+	letter-spacing: 5px;
+}
+#v-pills-Podcasts #Card3 .upper-content p, #v-pills-Podcasts #Card3 .lower-content p{
+	letter-spacing: 5px;
+}
+#v-pills-Podcasts #Card4 .upper-content p, #v-pills-Podcasts #Card4 .lower-content p{
+	letter-spacing: 5px;
+}
+#v-pills-Podcasts #Card2, #v-pills-Podcasts #Card2 img{
+	max-height: 450px;
+	min-height: 450px;
+}
+#v-pills-Podcasts #Card2 .upper-content{
+	margin-bottom: 250px;
+}
+#v-pills-Podcasts #Card3, #v-pills-Podcasts #Card3 img{
+	max-height: 213px;
+	min-height: 213px;
+}
+#v-pills-Podcasts #Card4, #v-pills-Podcasts #Card4 img{
+	max-height: 213px;
+	min-height: 213px;
+}
+#v-pills-Podcasts #Card3 .upper-content, #v-pills-Podcasts #Card4 .upper-content{
+	margin-bottom: 10px;
+}
+
+#NasaTopics .card, #NasaTopics .card img{
+	max-height: 461px;
+	min-height: 461px;
+	max-width: 307px;
+	min-width: 307px;
+}
+#NasaTopics .card-img-overlay, .MissionCard .card-img-overlay{
+	background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(40, 40, 40, 0.9));
+}
+#NasaTopics .card-img-overlay h5{
+	max-width: 290px;
+	margin-top: 370px;
+}
